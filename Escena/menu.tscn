@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://br11362u04xd5"]
+
+[ext_resource type="Script" uid="uid://bx6dffy7vy6oy" path="res://Scripts/menu.gd" id="1_rjwt7"]
+
+[node name="Menu" type="Control" unique_id=1634164339]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rjwt7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1222913000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Iniciar" type="Button" parent="VBoxContainer" unique_id=2102334249]
+layout_mode = 2
+text = "Iniciar"
+
+[node name="Opciones" type="Button" parent="VBoxContainer" unique_id=1092781393]
+layout_mode = 2
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=1737074411]
+layout_mode = 2
+text = "Salir
+"
+
+[connection signal="pressed" from="VBoxContainer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
