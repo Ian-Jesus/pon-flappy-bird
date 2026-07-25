@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://buxjtpqdye4df"]
+
+[ext_resource type="Texture2D" uid="uid://e8jjm6ltkpqe" path="res://icon.svg" id="1_2gby4"]
+[ext_resource type="Script" uid="uid://bltlu75a5n5p5" path="res://Scripts/pon.gd" id="1_luh3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obaep"]
+size = Vector2(120, 120)
+
+[node name="Pon" type="CharacterBody2D" unique_id=841104766]
+script = ExtResource("1_luh3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=519620230]
+shape = SubResource("RectangleShape2D_obaep")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=441410721]
+texture = ExtResource("1_2gby4")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dtcwnytkbycxi"]
+
+[ext_resource type="PackedScene" uid="uid://buxjtpqdye4df" path="res://Actores/pon.tscn" id="1_j4xm7"]
+[ext_resource type="Texture2D" uid="uid://e8jjm6ltkpqe" path="res://icon.svg" id="2_vycp0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obaep"]
+size = Vector2(5000, 100)
+
+[node name="Mundo" type="Node2D" unique_id=533833770]
+
+[node name="Pon" parent="." unique_id=841104766 instance=ExtResource("1_j4xm7")]
+
+[node name="Camera2D" type="Camera2D" parent="Pon" unique_id=1734819317]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=517345549]
+position = Vector2(0, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2120420827]
+scale = Vector2(200, 0.8)
+texture = ExtResource("2_vycp0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=120214907]
+shape = SubResource("RectangleShape2D_obaep")
