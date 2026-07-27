@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c40i43o3m68fs"]
+
+[ext_resource type="Script" uid="uid://do24apf4wkdsv" path="res://Scripts/invocador.gd" id="1_k6qbs"]
+[ext_resource type="Texture2D" uid="uid://e8jjm6ltkpqe" path="res://icon.svg" id="1_rcgy3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obaep"]
+size = Vector2(120, 120)
+
+[node name="Invocador" type="CharacterBody2D" unique_id=1483870585]
+script = ExtResource("1_k6qbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=382680101]
+shape = SubResource("RectangleShape2D_obaep")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1892121184]
+modulate = Color(0.49803922, 1, 0.05490196, 1)
+texture = ExtResource("1_rcgy3")
+
+[node name="GenerarObstaculo" type="Timer" parent="." unique_id=1263739892]
+wait_time = 2.0
+
+[connection signal="timeout" from="GenerarObstaculo" to="." method="_on_generar_obstaculo_timeout"]
